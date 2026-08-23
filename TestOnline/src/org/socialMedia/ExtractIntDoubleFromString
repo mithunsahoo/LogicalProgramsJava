@@ -1,0 +1,21 @@
+class ExtractIntDoubleFromString {
+    public static void main(String[] args) {
+        String str = "hello 90 world 11.90";
+        String temp = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if ((ch >= '0' && ch <= '9') || ch == '.') temp += ch;
+            else if (!temp.isEmpty()) {
+                if (temp.contains(".")) 
+                    System.out.println("Double: " + Double.parseDouble(temp));
+                else System.out.println("Int: " + Integer.parseInt(temp));
+                temp = "";
+            }
+        }
+        if (!temp.isEmpty()) {
+            if (temp.contains("."))
+             System.out.println("Double: " + Double.parseDouble(temp));
+            else System.out.println("Int: " + Integer.parseInt(temp));
+        }
+    }
+}
