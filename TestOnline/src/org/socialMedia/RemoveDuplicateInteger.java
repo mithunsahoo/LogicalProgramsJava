@@ -15,3 +15,12 @@ public class RemoveDuplicateInteger {
         System.out.println(set.toString());
     }
 }
+/*  for(int i=0;i<ch.length;i++){
+            if(ch[i]=='0') continue;
+            for(int j=i+1;j<ch.length;j++){
+                if(ch[i]==ch[j]){
+                    ch[j]='0';
+                }
+            }
+            System.out.println(ch[i]);
+        } */
